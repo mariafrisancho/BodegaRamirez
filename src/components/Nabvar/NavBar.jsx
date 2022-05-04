@@ -1,27 +1,21 @@
-import {Container, Nav, Navbar,NavDropdown}  from 'react-bootstrap'
-
-
+import './NavBar.css'
+import'./logo.png'
 const NavBar = () => {
   return (
-  <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
- <Container> 
-  <Navbar.Brand href="#home">Bodega Ramirez</Navbar.Brand>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-  <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="me-auto">
-      <Nav.Link href="#features">Historia</Nav.Link>
-      <NavDropdown title="Productos" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Vinos</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Piscos</NavDropdown.Item>
-     
-      </NavDropdown>
-      <Nav.Link href="#pricing">Contactos</Nav.Link>
-     
-    </Nav>
-   
-  </Navbar.Collapse>
-</Container> 
-</Navbar>
+    <header classNameName="App-header">
+    
+  
+    <nav>
+  
+      <ul>
+      <img src="logo.png" alt="Bodega Ramirez"/>
+      <li><a href="#"  > Inicio</a></li>
+      <li><a href="#">Quiénes somos</a></li>
+      <li><a href="#">Productos</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+    </nav>
+    </header>
   )
 }
 export default NavBar
