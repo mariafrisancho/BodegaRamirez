@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react'
 
-function ItemCount({stock=3,initial=1}) {
+function ItemCount({stock,initial,onAdd}) {
     const[cuenta,setCuenta]=useState(1)
     
     function contar() {
@@ -17,10 +17,9 @@ function ItemCount({stock=3,initial=1}) {
         
         }  
     }
-    function agregaCarrito() {
-     console.log({cuenta})
-    }
+  const agregaCarrito=()=>{onAdd=console.log(cuenta)}
   return (
+
     <div>
     <button onClick={contar}> + </button>
     <input type="text" value={cuenta}></input>
