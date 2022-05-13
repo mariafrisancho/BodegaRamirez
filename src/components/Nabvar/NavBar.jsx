@@ -1,22 +1,25 @@
 import CartWidget from '../CartWidget/CartWidget'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 import './NavBar.css'
-// import'./logo.png'
+import { Logo } from '../CartWidget/Logo';
 const NavBar = () => {
   return (
-    <header classNameName="App-header">
-     
-    <nav>
-  
-      <ul>
-      <li><a href="#" > Inicio</a></li>
-      <li><a href="#">Quiénes somos</a></li>
-      <li><a href="#">Productos</a></li>
-      <li><a href="#">Contacto</a></li>
-      <CartWidget/>
-    </ul>
-
-    </nav>
-    </header>
+    <Navbar bg="dark" variant="dark">
+    
+      <Container>
+ 
+        <Navbar.Brand href="#home">  <Logo /> </Navbar.Brand>
+        <Nav className="me-auto">
+          <Nav.Link href="#home">Inicio</Nav.Link>
+          <Nav.Link href="#features">Vinos</Nav.Link>
+          <Nav.Link href="#pricing">Piscos</Nav.Link>
+          <Nav.Link href="#pricing">Destilado</Nav.Link>
+        </Nav>
+        <CartWidget />
+      </Container>
+    </Navbar>
   )
 }
 export default NavBar
