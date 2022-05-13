@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
-// import Img from '../media/piscoacholado.jpg'
+
 
 
 const productos = [
@@ -11,7 +11,7 @@ const productos = [
     descripcion: "VARIEDAD NEGRA CRIOLLA 12 ° GRADO ALCOHOLICO",
     precio: 50,
     categoria: "VINOS",
-    img: "../media/vinoseco.jpg",
+    img:"/media/vinoseco.jpg",
     cantidad: 1
   },
   {
@@ -20,7 +20,7 @@ const productos = [
     descripcion: "BLEND 60% NEGRA CRIOLLA , 40% MOSCATEL",
     precio: 50,
     categoria: "VINOS",
-    img: "../media/vinosemiseco.jpg",
+    img: "/media/vinosemiseco.jpg",
     cantidad: 1
   },
   {
@@ -29,7 +29,7 @@ const productos = [
     descripcion: "VARIEDAD MOSCATEL 12° GRADO ALCOHOLICO",
     precio: 50,
     categoria: "VINOS",
-    img: "../media/vinodulce.jpg",
+    img: "/media/vinodulce.jpg",
     cantidad: 1
   },
   {
@@ -38,7 +38,7 @@ const productos = [
     descripcion: "VARIEDAD NEGRA CRIOLLA 42 ° GRADO ALCOHOLICO",
     precio: 50,
     categoria: "PISCO",
-    img: "../media/pisconegracriolla.jpg",
+    img: "/media/pisconegracriolla.jpg",
     cantidad: 1
   },
   {
@@ -47,7 +47,7 @@ const productos = [
     descripcion: "VARIEDAD MOSCATEL 42 ° GRADO ALCOHOLICO",
     precio: 50,
     categoria: "PISCO",
-    img: "../media/piscomoscatel.jpg",
+    img: "/media/piscomoscatel.jpg",
     cantidad: 1
   },
   {
@@ -55,7 +55,7 @@ const productos = [
     nombre: "PISCO ACHOLADO",
     descripcion: "PISCO UVA MOSCATEL Y  UVA NEGRA CRIOLLA 42 ° GRADO ALCOHOLICO",
     precio: 50, "categoria": "Destilado",
-    img: '../media/piscoacholado.jpg',
+    img: '/media/piscoacholado.jpg',
     cantidad: 1
   }]
 
