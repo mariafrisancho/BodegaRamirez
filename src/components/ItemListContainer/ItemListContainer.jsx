@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
+import getFetch from '../helpers/getFetch'
 
 
 
@@ -11,7 +13,7 @@ const productos = [
     descripcion: "VARIEDAD NEGRA CRIOLLA 12 ° GRADO ALCOHOLICO",
     precio: 50,
     categoria: "VINOS",
-    img:"/media/vinoseco.jpg",
+    img: "/media/vinoseco.jpg",
     cantidad: 1
   },
   {
@@ -54,29 +56,51 @@ const productos = [
     id: 6,
     nombre: "PISCO ACHOLADO",
     descripcion: "PISCO UVA MOSCATEL Y  UVA NEGRA CRIOLLA 42 ° GRADO ALCOHOLICO",
+    categoria: "PISCO",
     precio: 50, "categoria": "Destilado",
     img: '/media/piscoacholado.jpg',
     cantidad: 1
   }]
 
-const getFech = new Promise((resolve) => {
+/* const getFech = new Promise((resolve) => {
   setTimeout(() => {
     resolve(productos)
   }, 3000)
 
 
-})
+}) */
 
 export const ItemListContainer = ({ saludo = 'saludo' }) => {
   const [productos, setProductos] = useState([])
+  const [loading, setLoading] = useState(true)
+  const { id } = useParams()
 
 
   useEffect(() => {
-    getFech
-      .then(respuesta => setProductos(respuesta))
-      .catch((err) => console.log(err))
+    if (id) {
+      getFetch()
+        .then(respuesta => setProductos(respuesta.filter((prods) => prods.categoria === id)))
+        .catch((err) => console.log(err))
+        .finally(() => setLoading(false))
 
-  },[])
+    } else {
+      getFetch()
+        .then(respuesta => setProductos(respuesta))
+        .catch((err) => console.log(err))
+        .finally(() => setLoading(false))
+
+    }
+
+  }, [id])
+
+
+ /*  useEffect(()=>{
+    getFech
+   .then(resp=>console.log(resp))}
+
+  ) */
+
+  function onAdd(cant) { console.log(cant) }
 
   return (
     <div>
@@ -84,8 +108,19 @@ export const ItemListContainer = ({ saludo = 'saludo' }) => {
         <h1>  {saludo}      </h1>
 
 
-       <ItemList products={productos} /> 
-   
+        {loading ?
+          <h2>Cargando...</h2>
+          :
+          <div style={{display:'flex',flexDirection:'row',flexWrap:'wrap'}}>
+            <ItemList products={productos} />
+          </div>
+       
+
+        }
+
+
+
+
 
       </main>
 

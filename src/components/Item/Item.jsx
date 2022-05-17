@@ -1,34 +1,34 @@
-import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
-
+import { Link } from "react-router-dom"
 
 export const Item = ({ product }) => {
   console.log(product)
   return (
 
-<>
-<Container>
+    <div
+      className='col-md-4'
+    >
 
-<Card style={{ width: '18rem' }}>
+      <div className="card w-100 mt-5" >
+        <div className="card-header">
+          {`${product.nombre} - ${product.categoria}`}
+        </div>
+        <div className="card-body">
+          <img src={product.img} alt='' className='w-50' />
+          {product.precio}
+        </div>
+        <div className="card-footer">
+      
+          <Link to={`/detalle/${product.id}`}>
 
-  <Card.Img variant="top" src={product.img}/>
-  <Card.Body>
-  <Card.Title>{product.nombre}</Card.Title>
-  <Card.Text>
-     {product.descripcion}
-     <p key={product.id}> </p>
-     <p>Precio = {product.precio} </p>
-    </Card.Text>
-    <Button variant="primary">Ver detalle del producto</Button>
+            <button className="btn btn-outline-primary btn-block">
+              detalle del producto
+            </button>
+          </Link>
+        </div>
+      </div>
 
-  </Card.Body> 
+    </div>
 
-</Card>
-</Container>
-</>
-
- 
 
   )
 }
