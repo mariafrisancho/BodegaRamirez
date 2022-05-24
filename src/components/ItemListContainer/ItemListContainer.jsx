@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
 import getFetch from '../helpers/getFetch'
+import ItemCount from '../ItemCount/ItemCount'
 
 
 
@@ -99,8 +100,10 @@ export const ItemListContainer = ({ saludo = 'saludo' }) => {
    .then(resp=>console.log(resp))}
 
   ) */
+  const onAdd=(cant)=>{
+    console.log(cant) 
+  }
 
-  function onAdd(cant) { console.log(cant) }
 
   return (
     <div>
@@ -118,7 +121,7 @@ export const ItemListContainer = ({ saludo = 'saludo' }) => {
 
         }
 
-
+ {/* <ItemCount initial={1} stock={5} onAdd={onAdd}/> */}
 
 
 
