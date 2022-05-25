@@ -4,6 +4,7 @@ import getFetch from '../helpers/getFetch'
 import ItemDetail from '../ItemDetail/ItemDetail'
 const ItemDetailContainer = () => {
   const [producto, setProducto] = useState({})
+  const[loading,setloading]=useState(true)
   const { detalleId } = useParams()
 
 
@@ -11,14 +12,21 @@ const ItemDetailContainer = () => {
     getFetch(detalleId)
       .then(respuesta => setProducto(respuesta))
       .catch((err) => console.log(err))
+      .finally(()=>setloading(false))
   }, [])
   console.log(detalleId)
   console.log(producto)
 
   return (
     <div>
+      { loading ?
+      <h2>Cargando...</h2>
+      :
+      <ItemDetail producto={producto} />  
+
+      }
      
-       <ItemDetail producto={producto} />  
+      
     </div>
   )
 }

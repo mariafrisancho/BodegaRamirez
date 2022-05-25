@@ -57,8 +57,8 @@ const productos = [
     id: 6,
     nombre: "PISCO ACHOLADO",
     descripcion: "PISCO UVA MOSCATEL Y  UVA NEGRA CRIOLLA 42 ° GRADO ALCOHOLICO",
-    categoria: "PISCO",
-    precio: 50, "categoria": "Destilado",
+    categoria: "Destilado",
+    precio: 50, 
     img: '/media/piscoacholado.jpg',
     cantidad: 1
   }]
