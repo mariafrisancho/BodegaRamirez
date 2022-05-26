@@ -6,7 +6,7 @@ const productos = [
       precio: 100,
       categoria: "VINOS",
       img: "/media/vinoseco.jpg",
-      cantidad: 10
+      stock: 10
     },
     {
       id: '2',
@@ -15,7 +15,7 @@ const productos = [
       precio: 50,
       categoria: "VINOS",
       img: "/media/vinosemiseco.jpg",
-      cantidad: 10
+      stock: 10
     },
     {
       id: '3',
@@ -24,7 +24,7 @@ const productos = [
       precio: 50,
       categoria: "VINOS",
       img: "/media/vinodulce.jpg",
-      cantidad: 10
+      stock: 10
     },
     {
       id: '4',
@@ -33,7 +33,7 @@ const productos = [
       precio: 50,
       categoria: "PISCO",
       img: "/media/pisconegracriolla.jpg",
-      cantidad: 10
+      stock: 10
     },
     {
       id: '5',
@@ -42,7 +42,7 @@ const productos = [
       precio: 50,
       categoria: "PISCO",
       img: "/media/piscomoscatel.jpg",
-      cantidad: 10
+      stock: 10
     },
     {
       id:'6' ,
@@ -51,7 +51,7 @@ const productos = [
       precio: 50, 
       categoria: "Destilado",
       img: '/media/piscoacholado.jpg',
-      cantidad: 10
+      stock: 10
     }]
  
     

@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 function ItemCount({inicial,stock, onAdd}) {
     const[cuenta,setCuenta]=useState(inicial)
-    console.log("hola soy itemcount")
+ 
   
     
     function sumar() {

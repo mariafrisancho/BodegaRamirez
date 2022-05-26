@@ -14,8 +14,7 @@ const ItemDetailContainer = () => {
       .catch((err) => console.log(err))
       .finally(()=>setloading(false))
   }, [])
-  console.log(detalleId)
-  console.log(producto)
+ 
 
   return (
     <div>

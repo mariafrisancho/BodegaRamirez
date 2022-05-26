@@ -31,7 +31,7 @@ const ItemDetail = ({producto}) => {
 
 const[count,setCount]=useState(0)
 
-const{addToCart}=useCartContext()
+const{addToCart,carList}=useCartContext()
 
 
 const onAdd=(cant)=>{
@@ -39,7 +39,7 @@ const onAdd=(cant)=>{
   addToCart({...producto,cantidad:cant})
   setCount(cant)
 }
-
+console.log(carList)
  
   return (
     <>
@@ -62,7 +62,7 @@ const onAdd=(cant)=>{
    
        <ItemCount 
          inicial={1}
-         stock={producto.cantidad}
+         stock={producto.stock}
          onAdd ={onAdd}/> 
        
         :

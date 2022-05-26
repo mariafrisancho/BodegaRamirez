@@ -5,12 +5,15 @@ import Navbar from 'react-bootstrap/Navbar';
 import './NavBar.css'
 import { Logo } from '../CartWidget/Logo';
 import { Link, NavLink } from 'react-router-dom';
+import { useCartContext } from '../../context/CartContext';
 
 
 
 const NavBar = () => {
+  const {cantidadTotal}=useCartContext()
+
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="dark" variant="dark" style={{color:"white"}}>
     
       <Container>
       <Link to="/"><Logo /></Link>
@@ -21,7 +24,9 @@ const NavBar = () => {
           <NavLink to='/categoria/PISCO'><button type="button" className="btn btn-dark">Piscos</button></NavLink>
           <NavLink to='/categoria/Destilado'><button type="button" className="btn btn-dark">Destilado</button></NavLink>
         </Nav>
+      
         <CartWidget />
+        cantidad: {cantidadTotal}
       </Container>
     </Navbar>
   )
