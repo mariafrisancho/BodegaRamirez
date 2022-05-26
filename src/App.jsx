@@ -18,7 +18,7 @@ function App() {
   
   
       <BrowserRouter>
-      <CartContextProvider>
+      {/* <CartContextProvider> */}
 
         <div classNameName="App">
 
@@ -33,7 +33,7 @@ function App() {
           </Routes>
 
         </div>
-        </CartContextProvider>
+        {/* </CartContextProvider> */}
       </BrowserRouter>
   
   )
