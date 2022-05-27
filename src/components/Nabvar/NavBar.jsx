@@ -27,7 +27,7 @@ const NavBar = () => {
           <NavLink to='/categoria/PISCO'><button type="button" className="btn btn-dark">Piscos</button></NavLink>
           <NavLink to='/categoria/Destilado'><button type="button" className="btn btn-dark">Destilado</button></NavLink>
         </Nav>
-        <h2>cantidad: {cantidadTotal()}</h2> 
+        {/* <h2>cantidad: {cantidadTotal()}</h2>  */}
         <CartWidget />
   
       </Container>
