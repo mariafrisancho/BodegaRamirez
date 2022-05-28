@@ -14,12 +14,14 @@ const CartContextProvider = ({ children }) => {
           const newCart=carList.filter(prod=>prod.id!==item.id)
           item.cantidad+=cantidadVieja
           carList[index].cantidad += cantidadVieja 
+          item.subtotal=item.cantidad*item.precio
           setCarlist([...newCart,item]) 
          
 
 
         }
         else {
+            item.subtotal=item.cantidad*item.precio
             setCarlist([
                 ...carList,item] //Spread agrega lo que hay en carlist + item
                 )
@@ -42,6 +44,7 @@ const CartContextProvider = ({ children }) => {
         return carList.reduce((contador,prod)=>contador+(prod.cantidad*prod.precio) ,0) 
 
     }
+  
 
     return (
         <CartContext.Provider

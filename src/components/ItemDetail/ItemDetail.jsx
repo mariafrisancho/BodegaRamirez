@@ -35,8 +35,9 @@ const{addToCart,carList}=useCartContext()
 
 
 const onAdd=(cant)=>{
-  console.log(cant)
-  addToCart({...producto,cantidad:cant})
+
+
+  addToCart({...producto,cantidad:cant,subtotal:0})
   setCount(cant)
 }
 console.log(carList)
