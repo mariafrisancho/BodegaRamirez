@@ -9,16 +9,12 @@ const Terminar = () => {
   return (
     <>
       <Link to='/cart' >
-        <button
-          className="btn btn-outline-primary"
-          onClick={() => console.log('ir a cart')}
-        >Terminar compra</button>
+        <button className="btn btn-outline-primary"  >Terminar compra</button>
+
       </Link>
       <Link to='/' >
-        <button
-          className="btn btn-outline-primary"
-          onClick={() => console.log('ir al home')}
-        >Seguir comprando</button>
+        <button className="btn btn-outline-primary" >Seguir comprando</button>
+
       </Link>
     </>
   )

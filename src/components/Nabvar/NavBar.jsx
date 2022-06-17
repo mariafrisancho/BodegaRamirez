@@ -16,7 +16,7 @@ const NavBar = () => {
   return (
    
  
-    <Navbar bg="dark" variant="dark" style={{color:"white"}}>
+    <Navbar bg="dark" variant="dark" >
     
       <Container>
       <Link to="/"><Logo /></Link>
@@ -25,7 +25,7 @@ const NavBar = () => {
        
           <NavLink to='/categoria/VINOS'><button type="button" className="btn btn-dark">Vinos</button></NavLink>
           <NavLink to='/categoria/PISCO'><button type="button" className="btn btn-dark">Piscos</button></NavLink>
-          <NavLink to='/categoria/Destilado'><button type="button" className="btn btn-dark">Destilado</button></NavLink>
+          <NavLink to='/categoria/DESTILADO'><button type="button" className="btn btn-dark">Destilado</button></NavLink>
         </Nav>
       
        {cantidadTotal()!==0 && cantidadTotal() }

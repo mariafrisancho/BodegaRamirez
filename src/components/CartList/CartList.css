@@ -1,0 +1,38 @@
+li {
+    text-align: left;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+}
+
+h2 {
+    align-items: center;
+    text-align: center;
+}
+
+.margenDiv{
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+
+h3 {
+    color: rgb(255, 153, 0);
+}
+
+.boton {
+    margin-top:10px;
+    margin-left: 50px;
+
+}
+
+.principal {
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+     align-items: center;
+
+}

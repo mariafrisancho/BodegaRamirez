@@ -1,11 +1,8 @@
-
 import { Link } from 'react-router-dom'
-
 
 import Img from '../imagenes/carrito.png'
 
 const CartWidget = () => {
-
 
 
   return (
